@@ -54,12 +54,12 @@ h2{
 
 /* Menambahkan animasi pada elemen yang diinginkan */
 .slidein-left {
-    animation: slideinleft 3s ease-out forwards;
+    animation: slideinleft 2s ease-out forwards;
 }
 
 @keyframes slideinleft {
     0% {
-        transform: translateX(-300px);
+        transform: translateX(-600px);
         opacity: 0;
     }
     100% {
@@ -91,16 +91,42 @@ h2{
 .reveal {
     opacity: 0;
     transform: translateY(50px); /* Mulai tersembunyi */
-    animation: reveal 2s ease-out forwards;
+    animation: reveal 3s ease-out forwards;
 }
 
 /* Kelas untuk mengaktifkan animasi saat terlihat di viewport */
 .reveal-visible {
     opacity: 1;
     transform: translateY(0);
-    animation: reveal 2s ease-out forwards;
+    animation: reveal 3s ease-out forwards;
 }
 
+/* Mendefinisikan animasi untuk efek scroll-to-reveal */
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(60px); /* Mulai dari bawah */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Posisi normal */
+    }
+}
+
+/* Menambahkan animasi ke elemen yang disembunyikan */
+.reveal1 {
+    opacity: 0;
+    transform: translateY(60px); /* Mulai tersembunyi */
+    animation: reveal 3s ease-out forwards;
+}
+
+/* Kelas untuk mengaktifkan animasi saat terlihat di viewport */
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: reveal 3s ease-out forwards;
+}
 
 
 nav{
@@ -300,7 +326,7 @@ nav button i{
 }
 
 .about > p{
-    font-size: 14px;
+    font-size: 15px;
     color: #606060;
     border: 1px solid #e8e8e8;
     padding: 6px 14px;
