@@ -40,6 +40,24 @@ h2{
     animation: slideinleft 3s ease-out forwards;
 }
 
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+.fadeout {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+
+
 /* Mendefinisikan animasi slideinleft */
 @keyframes slideinleft {
     0% {
@@ -126,6 +144,21 @@ h2{
     opacity: 1;
     transform: translateY(0);
     animation: reveal 3s ease-out forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slidein-right {
+    animation: slideInRight 3s ease-out;
 }
 
 
@@ -307,7 +340,7 @@ nav button i{
     margin-left: 10px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     font-size: 20px;
     cursor: pointer;
     width: fit-content;
